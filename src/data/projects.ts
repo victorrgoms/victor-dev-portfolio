@@ -13,7 +13,7 @@ export const projects = [
     title: "Thunder Wings (Game)",
     description: "Projeto de Computação Gráfica. Jogo arcade 2D desenvolvido para entender loops de renderização e física básica.",
     tags: ["Python", "OpenGL", "Game Dev", "Computação Gráfica"],
-    repoUrl: "https://github.com/https://github.com/victorrgoms/Thunder-Wings",
+    repoUrl: "https://github.com/victorrgoms/Thunder-Wings",
     liveUrl: null,
     featured: false,
   },
