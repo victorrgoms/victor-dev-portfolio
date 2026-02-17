@@ -1,15 +1,12 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google"; // Importando as fontes do Google
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-// Configurando a fonte principal (leitura fluida)
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-// Configurando a fonte de código (pra dar aquele ar de engenharia)
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
@@ -26,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" class="dark"> {/* Forçando o dark mode direto na tag html */}
+    <html lang="pt-br" className="dark">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background text-foreground`}
       >
         {children}
       </body>

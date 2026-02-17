@@ -1,0 +1,56 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Netflix Clone",
+    description: "Interface front-end moderna replicando a experiência da Netflix. Foco em consumo de API (TMDB), componentização com React e design responsivo.",
+    tags: ["React", "CSS3", "TMDB API", "Front-end"],
+    repoUrl: "https://github.com/victorrgoms/netflix-clone", // Ajuste se o link for diferente
+    liveUrl: "https://netflix-clone-d0de9.web.app/", // Se tiver deploy, coloque aqui
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Thunder Wings (Game)",
+    description: "Projeto de Computação Gráfica. Jogo arcade 2D desenvolvido para entender loops de renderização e física básica.",
+    tags: ["Python", "OpenGL", "Game Dev", "Computação Gráfica"],
+    repoUrl: "https://github.com/https://github.com/victorrgoms/Thunder-Wings",
+    liveUrl: null,
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "EconoEasy Backend",
+    description: "Aplicação Java para gerenciamento de gastos pessoais. Desenvolvida com Java (Spring Boot)",
+    tags: ["Java", "Spring Boot", "API", "MVC", "PostgreSQL"],
+    repoUrl: "https://github.com/victorrgoms/gestor-gastos",
+    liveUrl: null,
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "EconoEasy Frontend",
+    description: "Aplicação NextJS para gerenciamento de gastos pessoais. Desenvolvida com React e NextJS, consumindo a API do EconoEasy Backend.",
+    tags: ["NextJS", "TypeScript", "React", "Consumo de API"],
+    repoUrl: "https://github.com/victorrgoms/econoeasy-frontend",
+    liveUrl: null,
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Águas Profundas - Experiência 3D",
+    description: "Aplicação WebGL para  simular um ambiente de sobrevivência em alto mar, onde o usuário controla um sobrevivente em uma jangada.",
+    tags: ["JavaScript", "WebGl", "GLSL", "Html", "Css"],
+    repoUrl: "https://github.com/victorrgoms/aguas-profundas-cg",
+    liveUrl: "https://victorrgoms.github.io/aguas-profundas-cg/",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Market Management",
+    description: "Aplicação de gerenciamento de mercados, clientes, funcionários e compras. A aplicação foi construída utilizando Java com Spring Boot para o back-end e React.js para o front-end.",
+    tags: ["Java", "Spring Boot", "React.js", "PostgreSQL"],
+    repoUrl: "https://github.com/victorrgoms/market-management",
+    liveUrl: null,
+    featured: false,
+  },
+];

@@ -63,7 +63,6 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      // Animações sutis (Framer Motion cuida do pesado, isso é pro básico)
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
