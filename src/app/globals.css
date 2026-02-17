@@ -1,26 +1,66 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Paleta Base - Dark Mode "First"
+      Tô usando valores HSL (Hue, Saturation, Lightness) pq o Shadcn
+      precisa disso pra calcular opacidades dinâmicas.
+    */
+    
+    /* Fundo principal: Um cinza quase preto, tipo fundo de terminal */
+    --background: 240 10% 3.9%; 
+    
+    /* Texto principal: Um off-white, pra não cansar a vista (branco puro #FFF dói o olho) */
+    --foreground: 0 0% 98%;
+
+    /* Cartões e superfícies elevadas (um pouco mais claro que o fundo) */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    /* Popovers e Modais */
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    /* A estrela do show: O Roxo Neon Suave 
+       HSL: 263 (Roxo), 70% (Saturação boa), 50% (Luminosidade média)
+       Isso vai pintar seus botões principais e links de destaque.
+    */
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 40% 98%; /* Texto branco em cima do roxo */
+ 
+    /* Cores secundárias (pra botões menos importantes, cinza azulado) */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    /* Cores de borda e inputs (cinza discreto pra separar conteúdo) */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    /* Cores de erro (Vermelho padrão, mas um pouco desaturado pra não gritar) */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Bordas sutis */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 70% 50%; /* O anel de foco quando clica no input */
+ 
+    /* Arredondamento dos botões (Radius) - 0.5rem fica moderno sem ser bolha */
+    --radius: 0.5rem;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Suaviza as fontes no navegador (antialiasing) */
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
